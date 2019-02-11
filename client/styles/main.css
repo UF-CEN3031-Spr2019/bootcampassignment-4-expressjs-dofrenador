@@ -1,3 +1,7 @@
+.jumbotron{
+  background-color:#2E2D80;
+  color:white;
+}
 #searchBar {
   margin: 15px 10px;
 }

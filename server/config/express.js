@@ -22,14 +22,21 @@ module.exports.init = function() {
   
   /**TODO
   Serve static files */
+  app.use('/',express.static('./client'));
+  
   
 
   /**TODO 
   Use the listings router for requests to the api */
+  app.use('/api/listings', listingsRouter);
 
 
   /**TODO 
   Go to homepage for all routes not specified */ 
+  app.all('/*',function(req, res,next) {
+    res.redirect('./index.html');
+  });
 
+  
   return app;
 };  
